@@ -34,6 +34,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->bind('App\Contracts\UserManagement\RoleContract', 'App\Repositories\UserManagement\RoleRepository');
         $this->app->bind('App\Contracts\UserManagement\UserActivityContract', 'App\Repositories\UserManagement\UserActivityRepository');
     }
 }

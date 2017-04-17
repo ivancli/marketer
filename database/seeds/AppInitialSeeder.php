@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class AppInitialSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(AppInitialSeeder::class);
+        $this->call(InitRolesSeeder::class);
+        $this->call(InitAdminSeeder::class);
     }
 }
